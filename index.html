@@ -2,459 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CleanStar Orza</title>
+    <title>Coming Soon - CleanStar Orza</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
 
-    <!-- Style Link -->
-    <link rel="stylesheet" href="style.css">
+        /* Full-page background */
+        body {
+            height: 100vh;
+            background: url('image/backgroung-img/image-1.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
 
-    <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <!-- AOS CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        /* Overlay for better readability */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
 
+        /* Content container */
+        .coming-soon {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        /* Optional animation */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .coming-soon h1 {
+            animation: pulse 2s infinite;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            p { font-size: 1.2rem; }
+        }
+    </style>
 </head>
 <body>
-    
-    <!-- Navigation bar start -->
-
-    <header>
-        <a href="#" class="logo" data-aos="fade-down">CleanStar Orza</a>
-        <div class="menuToggle" onclick="toggleMenu();"></div>
-        <ul class="nav">
-            <li data-aos="fade-down" data-aos-delay="50"><a href="#home"  onclick="toggleMenu();">Home</a></li>
-            <li data-aos="fade-down" data-aos-delay="100"><a href="#about"  onclick="toggleMenu();">About</a></li>
-            <li data-aos="fade-down" data-aos-delay="150"><a href="#system"  onclick="toggleMenu();">Systems</a></li>
-            <li data-aos="fade-down" data-aos-delay="200"><a href="#service"  onclick="toggleMenu();">Services</a></li>
-            <li data-aos="fade-down" data-aos-delay="250"><a href="#testimonial"  onclick="toggleMenu();">Testimonials</a></li>
-            <li data-aos="fade-down" data-aos-delay="300"><a href="#contact"  onclick="toggleMenu();">Contact</a></li>
-        </ul>
-    </header>
-
-    <!-- Navigation bar end -->
-
-    <!-- Landing Page start -->
-
-    <section class="hero_section" id="home">
-        <div class="content">
-            <h2 data-aos="fade-down" data-aos-delay="50">CleanStar Orza</h2>
-            <p data-aos="fade-down" data-aos-delay="100">
-                We Handle the Mess,<br>
-                You Enjoy the Freshness!
-            </p>
-            <a href="#about" class="btn btn_1">Discover</a>
-
-        </div>
-    </section>
-
-    <!-- Landing Page end -->
-
-    <!-- About Section start -->
-
-    <section class="about_section" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="content" data-aos="fade-right">
-                    <div class="head_title">
-                        <span>A</span>bout Us
-                    </div>
-                    <p>Welcome to <span>CleanStar Orza</span>, your trusted partner for all your laundry needs! We understand that life can get busy, and laundry often falls to the bottom of your to-do list. That’s where we come in. Our mission is to make laundry day effortless, convenient, and stress-free. Whether it’s your everyday clothes, delicate fabrics, or bulky bedding, we handle it all with care, precision, and a commitment to quality. Say goodbye to laundry hassles and hello to fresh, clean clothes delivered right to your doorstep.</p>
-                </div>
-                <div class="content" data-aos="fade-left">
-                    <div class="img_box">
-                        <img src="image/about-img/image-1.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="content" data-aos="fade-left">
-                    <p>At <span>CleanStar Orza</span>, we take pride in offering more than just laundry services – we deliver an experience. Our team of professionals uses state-of-the-art equipment and eco-friendly detergents to ensure your clothes are cleaned to perfection, every time. From stain removal to fabric softening, we pay attention to the smallest details so you can enjoy the confidence of wearing spotless, fresh-smelling clothes. With flexible scheduling, affordable pricing, and a customer-first approach, we’re here to make your life easier and your wardrobe brighter.</p>
-                </div>
-                <div class="content" data-aos="fade-right">
-                    <div class="img_box">
-                        <img src="image/about-img/image-2.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="content" data-aos="fade-right">
-                    <p>We believe that clean clothes shouldn’t come at the cost of your time or the environment. That’s why we’ve designed our services to be fast, reliable, and sustainable. Whether you’re a busy professional, a parent juggling multiple responsibilities, or someone who simply values their free time, <span>CleanStar Orza</span> is here to support you. Let us take care of the laundry while you focus on what truly matters. Experience the difference today – because you and your clothes deserve the best!</p>
-                </div>
-                <div class="content" data-aos="fade-left">
-                    <div class="img_box">
-                        <img src="image/about-img/image-3.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section end -->
-
-    <!-- System Section start -->
-
-    <section class="system_section" id="system">
-
-        <div class="container">
-
-            <div class="title_container dark" data-aos="fade-down">
-                <h2 class="head_title">Our <span>S</span>ystem</h2>
-                <p class="subtitle">Five Easy Steps to Spotless Clothes.</p>
-            </div>
-
-            <div class="row">
-                <div class="timeline">
-                    <div class="row">
-                        <div class="timeline_item">
-                            <div class="timeline_item_inner">
-                                <i class="dot"></i>
-                                <span>Administration</span>
-                                <h4>Admin</h4>
-                                <p>Our admin team ensures everything runs smoothly. They manage orders, coordinate schedules, and handle customer inquiries to provide a seamless experience from start to finish.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline_item">
-                            <div class="timeline_item_inner">
-                                <i class="dot"></i>
-                                <span>Washing Stage</span>
-                                <h4>Laundry Attendant</h4>
-                                <p>Our skilled laundry attendants carefully sort and wash your clothes using the latest technology and eco-friendly detergents. Every garment is treated with care to ensure a thorough and gentle clean.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline_item">
-                            <div class="timeline_item_inner">
-                                <i class="dot"></i>
-                                <span>Drying Stage</span>
-                                <h4>Drying Clerk</h4>
-                                <p>After washing, our drying clerks ensure your clothes are dried perfectly. Using advanced drying techniques, they preserve fabric quality while removing every trace of moisture.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline_item">
-                            <div class="timeline_item_inner">
-                                <i class="dot"></i>
-                                <span>Ironing Stage</span>
-                                <h4>Ironing Officer</h4>
-                                <p>Our ironing officers give your clothes a crisp, polished finish. With precision and attention to detail, they ensure every fold and crease is perfect, leaving your garments looking brand new.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline_item">
-                            <div class="timeline_item_inner">
-                                <i class="dot"></i>
-                                <span>Packaging Stage</span>
-                                <h4>Packing Officer</h4>
-                                <p>At the final stage, our packing officers carefully fold and package your clothes. They ensure everything is neatly organized and ready for delivery, so your laundry arrives fresh and pristine.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- System Section end -->
-
-    <!-- Service Section start -->
-
-    <section class="service_section" id="service">
-
-        <div class="title_container" data-aos="fade-down">
-            <h2 class="head_title">Our <span>S</span>ervice</h2>
-            <p class="subtitle">Cleaning Everything You Wear, Every Day.</p>
-        </div>
-
-        <div class="collection">
-
-            <div class="row" data-aos="down" data-aos-delay="100">
-                <div class="card">
-                    <div class="img_box">
-                        <img src="image/service-img/image-1.jpg" alt="">
-                    </div>
-                    <div class="footer_card">
-                        <h3>T-Shirt</h3>
-                        <label for="check" class="next">
-                            <a id="order" class="btn btn_2">Order <i class="fa-solid fa-arrow-right"></i></a>
-                        </label>
-                    </div>
-                    <input type="checkbox" id="check">
-
-                    <div class="form_container">
-                        <form action="/" class="form_content">
-                            <h2 class="header_form">Order Form</h2>
-
-                            <div class="form_input_container">
-                                <div class="form_input">
-                                    <label for="customer_name_1">Customer</label>
-                                    <input type="text" id="customer_name_1" placeholder="Name" class="input_field">
-                                </div>
-                                <div class="form_input">
-                                    <label for="quantity_1">Weight</label>
-                                    <input type="text" id="quantity_1" placeholder="Kg" class="input_field">
-                                </div>
-                                <select name="estimation" class="input_field">
-                                    <option selected disabled>Estimation</option>
-                                    <option value="fast">3 Hours</option>
-                                    <option value="super">12 Hours</option>
-                                    <option value="rare">1 Day</option>
-                                    <option value="common">2 Day</option>
-                                    <option value="broke">1 Month</option>
-                                </select>
-                                <select name="service" class="input_field">
-                                    <option selected disabled>Service</option>
-                                    <option value="laundry">Laundry</option>
-                                    <option value="ironing">Ironing</option>
-                                    <option value="doubleService">Laundry & Ironing</option>
-                                </select>
-                            </div>
-
-                            <div class="footer_form">
-                                <label for="check">
-                                    <a class="btn btn_1" id="back">Back</a>
-                                </label>
-                                <label for="confirm">
-                                    <button type="submit" class="btn btn_2" id="confirm">Confirm</button>
-                                </label>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row" data-aos="down" data-aos-delay="200">
-                <div class="card">
-                    <div class="img_box">
-                        <img src="image/service-img/image-2.jpg" alt="">
-                    </div>
-                    <div class="footer_card">
-                        <h3>Blanket</h3>
-                        <label for="check2" class="next">
-                            <a id="order" class="btn btn_2">Order<i class="fa-solid fa-arrow-right"></i></a>
-                        </label>
-                    </div>
-                    <input type="checkbox" id="check2">
-
-                    <div class="form_container">
-                        <form action="/" class="form_content">
-                            <h2 class="header_form">Order Form</h2>
-                            <div class="form_input_container">
-                                <div class="form_input">
-                                    <label for="customer_name_2">Customer</label>
-                                    <input type="text" id="customer_name_2" placeholder="Name" class="input_field">
-                                </div>
-                                <div class="form_input">
-                                    <label for="quantity_2">Quantity</label>
-                                    <input type="text" id="quantity_2" placeholder="Pcs" class="input_field">
-                                </div>
-                                <select name="estimation" class="input_field">
-                                    <option selected disabled>Estimation</option>
-                                    <option value="fast">3 Hours</option>
-                                    <option value="super">12 Hours</option>
-                                    <option value="rare">1 Day</option>
-                                    <option value="common">2 Day</option>
-                                    <option value="broke">1 Month</option>
-                                </select>
-                                <select name="service" class="input_field">
-                                    <option selected disabled>Service</option>
-                                    <option value="laundry">Laundry</option>
-                                    <option value="ironing">Ironing</option>
-                                    <option value="doubleService">Laundry & Ironing</option>
-                                </select>
-                            </div>
-                            <div class="footer_form">
-                                <label for="check2">
-                                    <a id="back" class="btn btn_1">Back</a>
-                                </label>
-                                <label for="confirm2">
-                                    <button id="confirm2" class="btn btn_2">Confirm</button>
-                                </label>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row" data-aos="down" data-aos-delay="300">
-                <div class="card">
-                    <div class="img_box">
-                        <img src="image/service-img/image-3.jpg" alt="">
-                    </div>
-                    <div class="footer_card">
-                        <h3>Shoes</h3>
-                        <label for="check3" class="next">
-                            <a id="order" class="btn btn_2">Order<i class="fa-solid fa-arrow-right"></i></a>
-                        </label>
-                    </div>
-                    <input type="checkbox" id="check3">
-
-                    <div class="form_container">
-                        <form action="/" class="form_content">
-                            <h2 class="header_form">Order Form</h2>
-                            <div class="form_input_container">
-                                <div class="form_input">
-                                    <label for="customer_name_3">Customer</label>
-                                    <input type="text" id="customer_name_3" placeholder="Name" class="input_field">
-                                </div>
-                                <div class="form_input">
-                                    <label for="quantity_3">Quantity</label>
-                                    <input type="text" id="quantity_3" placeholder="Pcs" class="input_field">
-                                </div>
-                                <select name="estimation" class="input_field">
-                                    <option selected disabled>Estimation</option>
-                                    <option value="fast">3 Hours</option>
-                                    <option value="super">12 Hours</option>
-                                    <option value="rare">1 Day</option>
-                                    <option value="common">2 Day</option>
-                                    <option value="broke">1 Month</option>
-                                </select>
-                                <select name="service" class="input_field">
-                                    <option selected disabled>Service</option>
-                                    <option value="laundry">Laundry</option>
-                                    <option value="ironing">Ironing</option>
-                                    <option value="doubleService">Laundry & Ironing</option>
-                                </select>
-                            </div>
-                            <div class="footer_form">
-                                <label for="check3">
-                                    <a class="btn btn_1" id="back">Back</a>
-                                </label>
-                                <label for="confirm3">
-                                    <button class="btn btn_2" id="confirm3">Confirm</button>
-                                </label>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Service Section end -->
-
-    <!-- Testimonials Section start -->
-
-    <!-- <section class="testimonials_section" id="testimonial">
-
-        <div class="title_container dark" data-aos="fade-down">
-            <h2 class="head_title">Their <span>T</span>estimonials</h2>
-            <p class="subtitle">Hear from Happy Customers Who Trust Us!</p>
-        </div>
-
-        <div class="container">
-
-            <div class="content" data-aos="fade-down" data-aos-delay="100">
-                <div class="img_box">
-                    <img src="image/testimonials-img/image-1.jpg" alt="">
-                </div>
-                <div class="text_box">
-                    <p>Life-saver service! My clothes always come back fresh and perfectly cleaned. Highly recommend!</p>
-                    <h3>Melody</h3>
-                </div>
-            </div>
-
-            <div class="content" data-aos="fade-down" data-aos-delay="200">
-                <div class="img_box">
-                    <img src="image/testimonials-img/image-2.jpg" alt="">
-                </div>
-                <div class="text_box">
-                    <p>Eco-friendly and effective! My clothes have never looked better. Love this service!</p>
-                    <h3>Moore</h3>
-                </div>
-            </div>
-
-            <div class="content" data-aos="fade-down" data-aos-delay="300">
-                <div class="img_box">
-                    <img src="image/testimonials-img/image-3.jpg" alt="">
-                </div>
-                <div class="text_box">
-                    <p>Laundry made easy! Perfect for busy families. Everything comes back clean and neatly folded.</p>
-                    <h3>Porsha</h3>
-                </div>
-            </div>
-
-        </div>
-
-    </section> -->
-
-    <!-- Testimonials Section end -->
-
-    <!-- Contact Section start -->
-
-    <section class="contact_section" id="contact">
-
-        <div class="title_container" data-aos="fade-down">
-            <h2 class="head_title">contact <span>U</span>s</h2>
-            <p class="subtitle">Contact Us to Schedule a Pickup or Ask a Question.</p>
-        </div>  
-
-        <div class="container">
-
-            <form class="contact_form">
-
-                <h3 data-aos="fade-right">Send a Message</h3>
-                <div class="input_form" data-aos="fade-right" data-aos-delay="20">
-                    <input type="text" id="contact_form_name" placeholder="Name" class="input_field">
-                </div>
-                <div class="input_form" data-aos="fade-right" data-aos-delay="40">
-                    <input type="text" id="contact_form_email" placeholder="Email" class="input_field">
-                </div>
-                <div class="input_form" data-aos="fade-right" data-aos-delay="60">
-                    <textarea placeholder="Message" id="contact_form_massage" class="input_field"></textarea>
-                </div>
-                <input type="submit" class="btn btn_2" value="Send" data-aos="fade-right" data-aos-delay="80">
-
-            </form>
-
-            <div class="map_box" data-aos="fade-left">
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2631.572474977409!2d23.8941585!3d47.9290741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4737bba8d09f7e17%3A0xbec0e7e50fe52d3a!2sStrada%20Drago%C8%99%20Vod%C4%83%202%2C%20Sighetu%20Marma%C8%9Biei%20435500!5e0!3m2!1sro!2sro!4v1694476000000!5m2!1sro!2sro" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            </div>
-
-            <div class="footer_contact">
-
-                <div class="item" data-aos="fade-down" data-aos-delay="100">
-                    <span>address</span>
-                    <p>Sighetu Marmatiei</p>
-                </div>
-                <div class="item" data-aos="fade-down" data-aos-delay="200">
-                    <span>email</span>
-                    <p>cleanstarorza@gmail.com</p>
-                </div>
-                <div class="item" data-aos="fade-down" data-aos-delay="300">
-                    <span>phone</span>
-                    <p>+0442195125215</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Contact Section end -->
-    
-    <!-- Copyright -->
-    <div class="cp">
-        <p>&copy; 2025 <a href="#">CleanStar Orza</a>. All Right Reserved</p>
+    <div class="coming-soon">
+        <h1>Coming Soon</h1>
+        <p>CleanStar Orza is getting ready to launch. Stay tuned!</p>
     </div>
-
-    <!-- JS Link -->
-    <script src="script.js"></script>
-
-    <!-- AOS JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script>
-        AOS.init({
-            duration: 600,
-        })
-    </script>
 </body>
 </html>
