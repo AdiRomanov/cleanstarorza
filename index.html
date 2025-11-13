@@ -273,48 +273,59 @@
       showOrderFormBtn.style.display = "block";
     });
 
-    // Confirmare trimitere Comandă
-   document.getElementById("orderForm").addEventListener("submit", function (e) {
+/* ------------------------------------------------
+   FORMULAR COMANDĂ
+-------------------------------------------------- */
+document.getElementById("orderForm").addEventListener("submit", function (e) {
   e.preventDefault();
   const form = e.target;
 
   fetch(form.action, {
     method: form.method,
     body: new FormData(form),
-    headers: { "Accept": "application/json" } // <-- spune serverului să nu redirecționeze
+    headers: { "Accept": "application/json" },
+    redirect: "manual" // 👈 oprește redirectul către /thanks (evită CORS)
   })
   .then(response => {
-    if (response.ok) {
+    // Uneori Formspree răspunde cu "opaqueredirect" chiar dacă totul e OK
+    if (response.ok || response.type === "opaqueredirect") {
       alert("✅ Comanda a fost trimisă cu succes! Vă mulțumim!");
       form.reset();
-      orderFormContainer.style.display = "none";
-      showOrderFormBtn.style.display = "block";
+
+      // Ascunde formularul, reafișează butonul
+      if (typeof orderFormContainer !== "undefined" && typeof showOrderFormBtn !== "undefined") {
+        orderFormContainer.style.display = "none";
+        showOrderFormBtn.style.display = "block";
+      }
     } else {
       alert("⚠️ A apărut o eroare la trimitere. Vă rugăm încercați din nou.");
     }
   })
-  .catch(() => {
+  .catch((error) => {
+    console.error("Network error:", error);
     alert("❌ Eroare de conexiune. Verifică internetul și încearcă din nou.");
   });
 });
 
-    // Confirmare trimitere Mesaj
-    document.getElementById("contactForm").addEventListener("submit", function (e) {
+
+/* ------------------------------------------------
+   FORMULAR CONTACT
+-------------------------------------------------- */
+document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
   const form = e.target;
 
   fetch(form.action, {
     method: form.method,
     body: new FormData(form),
-    headers: { "Accept": "application/json" }
+    headers: { "Accept": "application/json" },
+    redirect: "manual" // 👈 previne redirectul blocat de CORS
   })
-  .then(async (response) => {
-    if (response.ok) {
-      alert("✅ Mesajul a fost trimis cu succes!");
+  .then(response => {
+    if (response.ok || response.type === "opaqueredirect") {
+      alert("✅ Mesajul a fost trimis cu succes! Vă vom contacta în cel mai scurt timp.");
       form.reset();
     } else {
-      const data = await response.json();
-      console.error("Server response:", data);
       alert("⚠️ A apărut o eroare la trimitere. Verifică datele și încearcă din nou.");
     }
   })
