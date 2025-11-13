@@ -62,6 +62,8 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  
 }
 .title_container.dark .head_title {
   color: #D4D4D8;
@@ -85,6 +87,35 @@ section {
 .title_container .subtitle {
   color: #52525B;
   text-align: center;
+}
+
+/* 🔸 Chenar special doar pentru secțiunea Contact */
+#contact .title_container {
+  background: rgba(0, 0, 0, 0.4);     /* fundal negru transparent */
+  padding: 25px 35px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+/* Text clar și contrastat peste fundal */
+#contact .title_container .head_title {
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+}
+
+#contact .title_container .head_title span {
+  color: #00bcd4;  /* turcoaz de brand */
+  font-weight: 700;
+}
+
+#contact .title_container .subtitle {
+  color: #f2f2f2;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .btn {
@@ -265,7 +296,7 @@ header .nav li a:hover {
 .system_section {
   position: relative;
   min-height: 100vh;
-  background: url(./image/background-img/image-2.jpg);
+  background: url(./image/background-img/image-1.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -553,84 +584,33 @@ header .nav li a:hover {
   width: 100%;
 }
 
-.testimonials_section {
-  position: relative;
-  min-height: 100vh;
-  background: url(./image/background-img/image-3.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 40px;
-}
-.testimonials_section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #3F3F46;
-  opacity: 0.5;
-}
-.testimonials_section .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 20px;
-}
-.testimonials_section .container .content {
-  width: 320px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  position: relative;
-  z-index: 10;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1);
-  border: solid 1px rgba(255, 255, 255, 0.25);
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  -webkit-backdrop-filter: blur(25px);
-          backdrop-filter: blur(25px);
-}
-.testimonials_section .container .content .img_box {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.testimonials_section .container .content .img_box img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.testimonials_section .container .content .text_box {
-  text-align: center;
-}
-.testimonials_section .container .content .text_box p {
-  color: #D4D4D8;
-  font-style: italic;
-  line-clamp: 3;
-}
-.testimonials_section .container .content .text_box h3 {
-  color: #F4F4F5;
-  font-weight: 500;
-}
 
 .contact_section {
   min-height: 100vh;
   overflow-x: hidden;
   display: grid;
   align-items: center;
+
+  /* 👇 adăugat: imaginea de fundal */
+  position: relative;
+  background: url('./image/background-img/image-1.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
 }
+
+.contact_section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 188, 212, 0.25); /* strat alb semitransparent pentru lizibilitate */
+  z-index: 0;
+}
+
+.contact_section .container {
+  position: relative;
+  z-index: 1; /* ⚙️ ca elementele să fie vizibile peste imagine */
+}
+
+
 .contact_section .container {
   margin: 40px 0 0;
   display: flex;
@@ -871,3 +851,233 @@ header .nav li a:hover {
     scale: 0.8;
   }
 }/*# sourceMappingURL=style.css.map */
+
+
+/* ===== Sistemul nostru (cu fundal original) ===== */
+
+.system_section {
+  position: relative;
+  background: url('./image/background-img/image-1.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  padding: 120px 0;
+  color: #fff;
+}
+
+.system_section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* strat semi-transparent peste imagine */
+  z-index: 0;
+}
+
+.system_section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== Timeline nou ===== */
+
+.timeline_new {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  margin-top: 50px;
+  padding-left: 40px;
+  border-left: 3px solid rgba(255,255,255,0.6);
+}
+
+.timeline_card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 25px 25px 25px 80px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px);
+}
+
+.timeline_card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.icon_box {
+  position: absolute;
+  top: 25px;
+  left: -30px;
+  background-color: #00bcd4;
+  color: white;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 22px;
+  box-shadow: 0px 3px 10px rgba(0, 188, 212, 0.5);
+}
+
+.text_box h3 {
+  font-size: 1.3rem;
+  color: #00bcd4;
+  margin-bottom: 8px;
+}
+
+.text_box h4 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.text_box p {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .timeline_new {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .timeline_card {
+    padding: 25px 20px;
+  }
+
+  .icon_box {
+    position: static;
+    margin-bottom: 15px;
+  }
+
+  .text_box h3 {
+    color: #00bcd4;
+  }
+}
+
+
+/* ===== Secțiune Servicii / Formular ===== */
+
+.services_content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  color: #333;
+}
+
+.service_intro {
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+}
+
+.center_btn {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.center_btn .btn_2 {
+  display: inline-block;
+  text-align: center;
+  min-width: 250px;
+}
+
+.price_link {
+  color: #00bcd4;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.price_link:hover {
+  color: #008ca0;
+}
+
+.order_form_container {
+  display: none;
+  margin-top: 50px;
+}
+
+.order_form {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 40px;
+  margin: 0 auto;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order_form h3 {
+  text-align: center;
+  color: #00bcd4;
+  margin-bottom: 20px;
+}
+
+.order_form label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+}
+
+.order_form input,
+.order_form select,
+.order_form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  resize: none;
+  transition: 0.3s;
+}
+
+.order_form input:focus,
+.order_form select:focus,
+.order_form textarea:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 6px rgba(0,188,212,0.4);
+  outline: none;
+}
+
+.order_form .form_actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order_form .btn_1,
+.order_form .btn_2 {
+  width: 48%;
+}
+
+@media (max-width: 768px) {
+  .order_form_container {
+    margin-top: 30px;
+  }
+
+  .order_form {
+    padding: 25px;
+  }
+
+  .order_form .form_actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .order_form .btn_1,
+  .order_form .btn_2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact_section {
+    background-attachment: scroll; /* fundalul se va deplasa normal */
+    min-height: auto;              /* nu forțăm 100vh */
+    padding: 80px 0;               /* spațiere suplimentară pentru respirare */
+  }
+}

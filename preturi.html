@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preturi – CleanStar Orza</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+    body {
+        background: url('./image/background-img/image-1.jpg') no-repeat center center/cover;
+        background-attachment: fixed;
+    }
+
+    .price_section {
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 10px;
+        margin: 120px auto;
+        padding: 40px;
+        max-width: 1000px;
+        color: #333;
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .price_section h1, .price_section h2 {
+        text-align: center;
+        color: #022853;
+        text-transform: uppercase;
+        margin: 30px 0 20px;
+        letter-spacing: 1px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+    }
+
+    th, td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background: #022853;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    tr:hover {
+        background: rgba(0, 188, 212, 0.08);
+    }
+
+    @media (max-width: 768px) {
+        .price_section {
+            padding: 20px;
+            margin: 80px 10px;
+        }
+        th, td {
+            font-size: 14px;
+            padding: 8px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html#home" class="logo" data-aos="fade-down">CleanStar Orza</a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="nav">
+            <li><a href="index.html#home">Acasă</a></li>
+            <li><a href="index.html#about">Despre</a></li>
+            <li><a href="index.html#service">Servicii</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="termeni-si-conditii.html">Termeni și Condiții</a></li>
+        </ul>
+    </header>
+
+    <!-- Section Prețuri -->
+    <section class="price_section" data-aos="fade-up">
+        <h1>Lista de Prețuri</h1>
+
+        <!-- Articole îmbrăcăminte -->
+        <h2>Articole Îmbrăcăminte</h2>
+        <table>
+            <thead>
+                <tr><th>Articol</th><th>Preț (lei)</th><th>Observații</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Bască</td><td>7</td><td></td></tr>
+                <tr><td>Batic</td><td>7</td><td></td></tr>
+                <tr><td>Blană sintetică scurtă</td><td>37</td><td></td></tr>
+                <tr><td>Blană sintetică lungă</td><td>42</td><td></td></tr>
+                <tr><td>Bluză</td><td>14</td><td></td></tr>
+                <tr><td>Capă sintetică</td><td>15</td><td></td></tr>
+                <tr><td>Cămașă</td><td>15</td><td></td></tr>
+                <tr><td>Cămașă populară</td><td>25</td><td></td></tr>
+                <tr><td>Costum subțire (vară)</td><td>42</td><td></td></tr>
+                <tr><td>Costum femei/bărbați 2 piese</td><td>44</td><td></td></tr>
+                <tr><td>Costum sport/pijama subțire</td><td>19</td><td></td></tr>
+                <tr><td>Costum sport gros</td><td>29</td><td></td></tr>
+                <tr><td>Combinezon ski</td><td>50</td><td></td></tr>
+                <tr><td>Cravată/Esarfă/Fular/Șal/Voal/Căciulă</td><td>9</td><td></td></tr>
+                <tr><td>Fustă scurtă</td><td>15</td><td></td></tr>
+                <tr><td>Fustă lungă</td><td>23–38</td><td>Preț în funcție de complexitate și material</td></tr>
+                <tr><td>Geacă blugi subțire</td><td>25</td><td></td></tr>
+                <tr><td>Geacă blugi groasă</td><td>29</td><td></td></tr>
+                <tr><td>Geacă puf scurtă</td><td>43</td><td></td></tr>
+                <tr><td>Geacă puf lungă</td><td>55</td><td></td></tr>
+                <tr><td>Geacă sintetică scurtă</td><td>29</td><td></td></tr>
+                <tr><td>Geacă sintetică lungă</td><td>35</td><td></td></tr>
+                <tr><td>Halat</td><td>15</td><td></td></tr>
+                <tr><td>Jeans</td><td>15</td><td></td></tr>
+                <tr><td>Maiou</td><td>8</td><td></td></tr>
+                <tr><td>Pălărie</td><td>25</td><td></td></tr>
+                <tr><td>Palton/Geacă stofă scurtă</td><td>32</td><td></td></tr>
+                <tr><td>Palton mediu</td><td>44</td><td></td></tr>
+                <tr><td>Palton lung</td><td>49</td><td></td></tr>
+                <tr><td>Pantaloni scurți, 3/4</td><td>10</td><td></td></tr>
+                <tr><td>Pantaloni lungi</td><td>22</td><td></td></tr>
+                <tr><td>Pardesiu</td><td>25</td><td></td></tr>
+                <tr><td>Parpalac</td><td>35</td><td></td></tr>
+                <tr><td>Pulover subțire</td><td>18</td><td></td></tr>
+                <tr><td>Pulover gros/Hanorac</td><td>20</td><td></td></tr>
+                <tr><td>Rochie mireasă simplă</td><td>de la 99</td><td>Preț în funcție de complexitate și material</td></tr>
+                <tr><td>Rochie mireasă cu trenă</td><td>de la 150</td><td>Preț în funcție de complexitate și material</td></tr>
+                <tr><td>Rochie</td><td>32</td><td></td></tr>
+                <tr><td>Rochie ocazie lungă</td><td>45–55</td><td>Preț în funcție de complexitate și material</td></tr>
+                <tr><td>Rochie ocazie scurtă</td><td>29–39</td><td>Preț în funcție de complexitate și material</td></tr>
+                <tr><td>Sacou subțire</td><td>19</td><td></td></tr>
+                <tr><td>Sacou gros</td><td>23</td><td></td></tr>
+                <tr><td>Tricou</td><td>9</td><td></td></tr>
+                <tr><td>Vestă puf scurtă</td><td>39</td><td></td></tr>
+                <tr><td>Vestă puf lungă</td><td>42</td><td></td></tr>
+                <tr><td>Vestă stofă</td><td>8</td><td></td></tr>
+                <tr><td>Vestă subțire</td><td>14</td><td></td></tr>
+                <tr><td>Vestă groasă</td><td>19</td><td></td></tr>
+            </tbody>
+        </table>
+
+        <!-- Articole copii -->
+        <h2>Articole Copii (0–10 ani)</h2>
+        <table>
+            <thead><tr><th>Articol</th><th>Preț (lei)</th><th>Observații</th></tr></thead>
+            <tbody>
+                <tr><td>Cămașă</td><td>10</td><td></td></tr>
+                <tr><td>Bluză</td><td>9</td><td></td></tr>
+                <tr><td>Costum 2 piese</td><td>29</td><td></td></tr>
+                <tr><td>Costum ski</td><td>29</td><td></td></tr>
+                <tr><td>Geacă puf</td><td>30</td><td></td></tr>
+                <tr><td>Geacă sintetică/blugi</td><td>15</td><td></td></tr>
+                <tr><td>Palton</td><td>25</td><td></td></tr>
+                <tr><td>Pantalon</td><td>8</td><td></td></tr>
+                <tr><td>Rochiță</td><td>20</td><td></td></tr>
+                <tr><td>Rochiță mireasă</td><td>de la 80</td><td>Preț în funcție de complexitate și material</td></tr>
+                <tr><td>Sacou</td><td>15</td><td></td></tr>
+                <tr><td>Vestă</td><td>4</td><td></td></tr>
+            </tbody>
+        </table>
+
+        <!-- Uniforme și veșminte speciale -->
+        <h2>Uniforme și Veșminte Speciale</h2>
+        <table>
+            <thead><tr><th>Articol</th><th>Preț (lei)</th><th>Observații</th></tr></thead>
+            <tbody>
+                <tr><td>Uniformă medicală / halat laborator</td><td>29</td><td></td></tr>
+                <tr><td>Uniformă militară / poliție</td><td>59</td><td></td></tr>
+                <tr><td>Uniformă bucătar / ospătar</td><td>39</td><td></td></tr>
+                <tr><td>Uniformă personal curățenie și întreținere</td><td>29</td><td></td></tr>
+                <tr><td>Combinezon / echipament protecție</td><td>35</td><td></td></tr>
+                <tr><td>Robă magistrat / academică</td><td>39</td><td></td></tr>
+                <tr><td>Veșmânt preoțesc complet</td><td>55</td><td></td></tr>
+                <tr><td>Costum cor / fanfară</td><td>59</td><td></td></tr>
+                <tr><td>Eșarfă / Bonetă / Șorț</td><td>10</td><td></td></tr>
+            </tbody>
+        </table>
+
+        <!-- Articole Casă -->
+        <h2>Articole Casă</h2>
+        <table>
+            <thead><tr><th>Articol</th><th>Preț (lei)</th><th>Observații</th></tr></thead>
+            <tbody>
+                <tr><td>Cearceaf/plic 1 pers</td><td>14</td><td></td></tr>
+                <tr><td>Cearceaf/plic 2 pers</td><td>16</td><td></td></tr>
+                <tr><td>Cuvertură pat</td><td>39</td><td></td></tr>
+                <tr><td>Față de pernă</td><td>7–10</td><td>Preț în funcție de dimensiune</td></tr>
+                <tr><td>Față de masă 4–6 pers</td><td>15</td><td></td></tr>
+                <tr><td>Față de masă 12 pers</td><td>17</td><td></td></tr>
+                <tr><td>Husă saltea / canapea</td><td>59</td><td></td></tr>
+                <tr><td>Husă scaun</td><td>14</td><td></td></tr>
+                <tr><td>Lenjerie pat 1 pers</td><td>32</td><td>(cearceaf, plic, față de pernă)</td></tr>
+                <tr><td>Lenjerie pat 2 pers</td><td>39</td><td>(cearceaf, plic, 2 fețe de pernă)</td></tr>
+                <tr><td>Napron / Șervet / Mileu mic</td><td>7</td><td></td></tr>
+                <tr><td>Mileu mediu/mare</td><td>12/19</td><td></td></tr>
+                <tr><td>Pătură lână mică (1.6×2.1)</td><td>48</td><td></td></tr>
+                <tr><td>Pătură lână mare (2.5×2.1)</td><td>58</td><td></td></tr>
+                <tr><td>Pătură mică</td><td>39</td><td></td></tr>
+                <tr><td>Pătură mare</td><td>49</td><td></td></tr>
+                <tr><td>Pătură dublu strat mică</td><td>49</td><td></td></tr>
+                <tr><td>Pătură dublu strat mare</td><td>49</td><td></td></tr>
+                <tr><td>Pernă sintetică mică</td><td>20</td><td></td></tr>
+                <tr><td>Pernă sintetică mare</td><td>25</td><td></td></tr>
+                <tr><td>Pernă pene mică</td><td>39</td><td></td></tr>
+                <tr><td>Pernă pene mare</td><td>49</td><td></td></tr>
+                <tr><td>Pilotă sintetică 1 pers</td><td>40</td><td></td></tr>
+                <tr><td>Pilotă sintetică 2 pers</td><td>50</td><td></td></tr>
+                <tr><td>Pilotă puf/pene 1 pers</td><td>59</td><td></td></tr>
+                <tr><td>Pilotă puf/pene 2 pers</td><td>69</td><td></td></tr>
+                <tr><td>Protecție saltea</td><td>35</td><td></td></tr>
+                <tr><td>Prosop față/mâini</td><td>10</td><td></td></tr>
+                <tr><td>Prosop baie</td><td>15</td><td></td></tr>
+                <tr><td>Covoraș baie</td><td>10</td><td></td></tr>
+                <tr><td>Pernă șezlong 1 pers</td><td>39</td><td></td></tr>
+                <tr><td>Pernă scaun</td><td>10</td><td></td></tr>
+                <tr><td>Sac dormit</td><td>39</td><td></td></tr>
+                <tr><td>Perdele</td><td>6/mp</td><td></td></tr>
+                <tr><td>Draperii</td><td>8/mp</td><td></td></tr>
+                <tr><td>Jucării de pluș &lt;30cm</td><td>7</td><td></td></tr>
+                <tr><td>Jucării de pluș 30–60cm</td><td>10</td><td></td></tr>
+                <tr><td>Jucării de pluș &gt;60cm</td><td>15</td><td></td></tr>
+            </tbody>
+        </table>
+
+        <!-- HORECA -->
+        <h2>HORECA</h2>
+        <p>*Pentru clienții HORECA, tarifele se calculează pe kilogram și se negociază în funcție de cantitate și flux.</p>
+        <table>
+            <thead><tr><th>Articol</th></tr></thead>
+            <tbody>
+                <tr><td>Lenjerie pat</td></tr>
+                <tr><td>Prosop</td></tr>
+                <tr><td>Halat</td></tr>
+                <tr><td>Față de masă</td></tr>
+                <tr><td>Husă scaun</td></tr>
+                <tr><td>Napron / Șervet</td></tr>
+                <tr><td>Uniforme personal</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <div class="cp">
+        <p>
+            &copy; 2025 <a href="index.html#home">CleanStar Orza</a> · Toate drepturile rezervate · 
+            <a href="termeni-si-conditii.html">Termeni și Condiții</a>
+        </p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        AOS.init({ duration: 600 });
+    </script>
+</body>
+</html>
