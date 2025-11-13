@@ -601,7 +601,7 @@ header .nav li a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 188, 212, 0.25); /* strat alb semitransparent pentru lizibilitate */
+  background: rgba(0, 0, 3, 0.158); /* strat alb semitransparent pentru lizibilitate */
   z-index: 0;
 }
 
@@ -850,14 +850,23 @@ header .nav li a:hover {
   .service_section .collection .row {
     scale: 0.8;
   }
+
+  
 }/*# sourceMappingURL=style.css.map */
 
-
+@media (max-width: 768px) {
+  .system_section,
+  .contact_section {
+    background-attachment: scroll; /* evită efectul blur */
+    background-size: 150%;        /* micșorează zoom-ul, imagine mai clară */
+    background-position: center top; /* focalizează partea de sus a imaginii */
+  }
+}
 /* ===== Sistemul nostru (cu fundal original) ===== */
 
 .system_section {
   position: relative;
-  background: url('./image/background-img/image-1.jpg') no-repeat center center/cover;
+  background: url('./image/background-img/image-1.jpg') no-repeat center center / cover;
   background-attachment: fixed;
   padding: 120px 0;
   color: #fff;
