@@ -158,6 +158,8 @@ section {
   resize: none;
 }
 
+
+
 header {
   position: fixed;
   top: 0;
@@ -170,6 +172,12 @@ header {
   align-items: center;
   transition: 0.5s;
 }
+
+header.hidden {
+    transform: translateY(-100%); /* Mută header-ul complet în sus, în afara vizibilității */
+}
+
+
 header.sticky {
   background: #FAFAFA;
   padding: 15px 100px;
@@ -296,7 +304,7 @@ header .nav li a:hover {
 .system_section {
   position: relative;
   min-height: 100vh;
-  background: url(./image/background-img/image-1.jpg);
+  background: url(./image/background-img/image-1.jpg) no-repeat center center / cover;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -586,15 +594,13 @@ header .nav li a:hover {
 
 
 .contact_section {
-  min-height: 100vh;
+  min-height: 100vh; /* Se menține 100vh ca la hero_section */
   overflow-x: hidden;
   display: grid;
   align-items: center;
-
-  /* 👇 adăugat: imaginea de fundal */
   position: relative;
-  background: url('./image/background-img/image-1.jpg') no-repeat center center/cover;
-  background-attachment: fixed;
+  background: url('./image/background-img/image-1.jpg') no-repeat center center/cover; /* Background-ul original */
+  background-attachment: fixed; /* Se menține fixed pentru desktop */
 }
 
 .contact_section::before {
@@ -854,14 +860,7 @@ header .nav li a:hover {
   
 }/*# sourceMappingURL=style.css.map */
 
-@media (max-width: 768px) {
-  .system_section,
-  .contact_section {
-    background-attachment: scroll; /* evită efectul blur */
-    background-size: 150%;        /* micșorează zoom-ul, imagine mai clară */
-    background-position: center top; /* focalizează partea de sus a imaginii */
-  }
-}
+
 /* ===== Sistemul nostru (cu fundal original) ===== */
 
 .system_section {
@@ -1083,10 +1082,3 @@ header .nav li a:hover {
   }
 }
 
-@media (max-width: 768px) {
-  .contact_section {
-    background-attachment: scroll; /* fundalul se va deplasa normal */
-    min-height: auto;              /* nu forțăm 100vh */
-    padding: 80px 0;               /* spațiere suplimentară pentru respirare */
-  }
-}

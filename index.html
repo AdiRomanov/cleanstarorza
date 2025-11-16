@@ -255,7 +255,7 @@
   <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 600 });
 
@@ -336,6 +336,30 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     alert("❌ Eroare de conexiune. Verifică internetul și încearcă din nou.");
   });
 });
+
+function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const nav = document.querySelector('.nav');
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+
+        // NOUL COD PENTRU ASCUNDERE/AFIȘARE HEADER LA SCROLL
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('header');
+        const scrollThreshold = 100; // Câți pixeli să scrollezi înainte de a ascunde header-ul
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > scrollThreshold) {
+                // Scroll în jos
+                header.classList.add('hidden');
+            } else if (window.scrollY < lastScrollY) {
+                // Scroll în sus
+                header.classList.remove('hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+
   </script>
 </body>
 </html>
