@@ -1082,3 +1082,14 @@ header .nav li a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  /* FIX PENTRU IMAGINILE DE FUNDAL PE MOBILE ȘI SCHIMBAREA IMAGINII */
+  .system_section,
+  .contact_section {
+    background-image: url('./image/background-img/image-1-mobile.png'); /* Noua imagine de fundal pentru mobil */
+    background-attachment: scroll; /* Fundalul se derulează normal cu conținutul */
+    background-size: 200%;        /* Asigură că imaginea acoperă toată secțiunea */
+    background-position: center center; /* Menține imaginea centrată */
+    background-color: #001133;
+  }
+}
