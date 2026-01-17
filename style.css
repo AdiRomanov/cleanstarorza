@@ -1212,3 +1212,53 @@ header .nav li a:hover {
         padding: 10px 15px;
     }
 }
+
+
+.project_footer_info {
+    /* Folosim 'auto' pentru margini sau valori egale sus/jos pentru centrare */
+    margin-top: 30px !important;    /* Distanța de la buton la logo-uri */
+    margin-bottom: 30px !important; /* Distanța de la textul MIPE la marginea de jos a chenarului */
+    
+    padding-top: 0;      /* Am scos padding-ul pentru a nu decala centrarea */
+    border-top: none;    /* Am scos linia pentru un aspect mai curat, dar o poți păstra dacă preferi */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project_logos_bottom {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 15px; /* Distanța mică dintre logo-uri și textul MIPE */
+}
+.project_funding_img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.mipe_text {
+    font-size: 0.85rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+.mipe_text a {
+    color: #0056b3;
+    font-weight: bold;
+}
+
+/* Ajustare mobil */
+@media (max-width: 768px) {
+    .project_logos_bottom {
+        gap: 15px;
+    }
+    .project_funding_img {
+        height: 35px;
+    }
+}
