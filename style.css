@@ -1228,14 +1228,16 @@ header .nav li a:hover {
     justify-content: center;
 }
 
-.project_logos_bottom {
+.project_logos_top {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 15px; /* Distanța mică dintre logo-uri și textul MIPE */
+    justify-content: space-between; /* Trimite UE în stânga și Guvern în dreapta */
+    align-items: center;
+    margin-bottom: 20px; /* Distanța față de titlul "Proiect" */
+    width: 100%;
 }
+
 .project_funding_img {
-    height: 50px;
+    height: 50px; /* Ajustează înălțimea după preferință */
     width: auto;
     object-fit: contain;
 }
@@ -1253,10 +1255,10 @@ header .nav li a:hover {
     font-weight: bold;
 }
 
-/* Ajustare mobil */
+/* Ajustare pentru ecrane mici (mobil) */
 @media (max-width: 768px) {
-    .project_logos_bottom {
-        gap: 15px;
+    .project_logos_top {
+        padding: 0 10px;
     }
     .project_funding_img {
         height: 35px;
