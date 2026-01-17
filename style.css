@@ -173,6 +173,62 @@ header {
   transition: 0.5s;
 }
 
+.header_logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Containerul care aliniază logo-ul tău cu cele de finanțare */
+.header_left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Stil pentru logo-ul tău principal */
+.main_logo {
+    height: 60px; /* Poți mări sau micșora aici în funcție de cum arată imaginea ta */
+    width: auto;
+    display: block;
+}
+
+/* Stil pentru logo-urile de finanțare */
+.funding_wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-left: 1px solid #ddd;
+    padding-left: 10px;
+}
+
+.funding_img {
+    height: 35px; /* Dimensiune optimă pentru antet */
+    width: auto;
+}
+
+/* --- OPTIMIZARE PENTRU TELEFON (Mobil) --- */
+@media (max-width: 768px) {
+    .header_left {
+        gap: 8px;
+        flex-wrap: nowrap; /* Forțează păstrarea pe același rând */
+    }
+
+    .main_logo {
+        height: 40px; /* Logo mai mic pe mobil pentru a face loc celorlalte */
+    }
+
+    .funding_img {
+        height: 25px; /* Logo-urile de finanțare se micșorează pentru a rămâne vizibile */
+    }
+
+    .funding_wrapper {
+        border-left: 1px solid #eee;
+        padding-left: 8px;
+        margin-left: 0;
+    }
+}
+
 header.hidden {
     transform: translateY(-100%); /* Mută header-ul complet în sus, în afara vizibilității */
 }
@@ -1092,4 +1148,67 @@ header .nav li a:hover {
     background-position: center center; /* Menține imaginea centrată */
     background-color: #001133;
   }
+}
+
+
+/* Stiluri pentru Secțiunea Proiect */
+.project_section {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.project_border_box {
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Border foarte subtil */
+    border-radius: 15px; /* Colțuri rotunjite */
+    padding: 40px;
+    background-color: #f9f9f9; /* Un fundal foarte ușor gri pentru a-l separa de restul paginii */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02); /* O umbră aproape invizibilă pentru profunzime */
+    text-align: center;
+}
+
+.project_content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.project_link_wrapper {
+    margin-top: 30px;
+}
+
+.project_btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #0056b3; /* Culoare profesională (albastru UE/Guvern) */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.project_btn i {
+    margin-right: 8px;
+}
+
+.project_btn:hover {
+    background-color: #fff;
+    color: #0056b3;
+    border: 2px solid #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Ajustare pentru mobil */
+@media (max-width: 768px) {
+    .project_border_box {
+        padding: 25px 15px;
+        margin: 0 10px;
+    }
+    
+    .project_btn {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
 }
