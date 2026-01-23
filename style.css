@@ -1264,3 +1264,58 @@ header .nav li a:hover {
         height: 35px;
     }
 }
+
+
+/* Stiluri pentru chenarul cu Orar */
+.schedule_box {
+  background-color: #f8f9fa; /* Fundal gri deschis */
+  border: 2px solid #ddd;    /* Margine subtilă */
+  border-radius: 10px;       /* Colțuri rotunjite */
+  padding: 25px;
+  margin: 30px auto;         /* Spațiu sus/jos */
+  max-width: 600px;          /* Lățimea maximă */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Umbră ușoară */
+}
+
+.schedule_box h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ffbc00; /* Linie galbenă decorativă sub titlu - schimbă culoarea dacă e nevoie */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.schedule_grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.schedule_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ccc; /* Linie punctată între zile */
+}
+
+.schedule_row:last-child {
+  border-bottom: none;
+}
+
+.schedule_row .day {
+  font-weight: 600;
+  color: #0a0909;
+}
+
+.schedule_row .hours {
+  font-weight: 700;
+  color: #222;
+}
+
+.schedule_row .hours.closed {
+  color: #d9534f; /* Culoare roșie pentru "Închis" */
+}
